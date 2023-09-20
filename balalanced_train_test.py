@@ -58,9 +58,9 @@ test['score'] = round(test['score'], 2)
 
 
 # Now shuffle the files before writing
-train = train.sample(frac=1).reset_index(drop=True)
-dev = dev.sample(frac=1).reset_index(drop=True)
-test = test.sample(frac=1).reset_index(drop=True)
+train = train.sample(frac=1,random_state=101).reset_index(drop=True)
+dev = dev.sample(frac=1,random_state=101).reset_index(drop=True)
+test = test.sample(frac=1,random_state=101).reset_index(drop=True)
 
 
 # Now, generate unique ID per train/dev/test

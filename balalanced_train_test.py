@@ -8,6 +8,8 @@ parser.add_argument('-d', '--dev', type=str, required=True, help='Dev file ')
 parser.add_argument('-e', '--eval', type=str, required=True, help='Test file ')
 parser.add_argument('-dt', '--devt', type=str, required=True, help='Dev file for task organizers ')
 parser.add_argument('-et', '--evalt', type=str, required=True, help='Test file for task organizers')
+parser.add_argument('-dc', '--devc', type=str, required=True, help='Dev file for Codalab submission ')
+parser.add_argument('-ec', '--evalc', type=str, required=True, help='Test file for Codalab submission')
 
 args = parser.parse_args()
 
@@ -17,6 +19,8 @@ dev_file = args.dev
 test_file = args.eval
 devt_file = args.devt
 testt_file = args.evalt
+devc_file = args.devc
+testc_file = args.evalc
 
 
 
@@ -88,3 +92,7 @@ test[["PairID","Text"]].to_csv(test_file,index=False)
 # test and dev for task organizers
 dev[["PairID","Text","score"]].to_csv(devt_file,index=False)
 test[["PairID","Text","score"]].to_csv(testt_file,index=False)
+
+# test and dev for codalab submission
+dev[["PairID","score"]].to_csv(devc_file,index=False)
+test[["PairID","score"]].to_csv(testc_file,index=False)

@@ -34,6 +34,7 @@ This repository provides a pipeline to find pairs of sentences that are likely t
   
       
 5.  **Generate the Semantic Relatedness Pairs and Score, and the SHR score**
+    -   Install the req. using the `install.sh` 
     -   Run the following bash script: [`process_annotations.sh`](https://github.com/shmuhammadd/semrel-pipeline/blob/main/process_annotations.sh)
     -   After running the above bash, it will generate multiple files below:
         1. Mapping between Pair and ID: `id_to_item.csv`

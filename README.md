@@ -146,7 +146,7 @@ Where:
 For example, 
 
 ``` bash
-bash process_annotations.sh -a PROCESSED_ANNOTATIONS -t ANNOTATION_TOOL -o OUPUT_DIR
+bash process_annotations.sh -a file_generated_at_step_4 -t label-studio -o OUPUT_DIR
 ```
 
 

@@ -67,7 +67,7 @@ else:
 print('Data size before preprocessing:', len(df))
 
 df = df.dropna()
-df = df[~df.apply(lambda row: row.str.contains('-')).any(axis=1)]
+df = df[(df['best-pair'] != '-') & (df['worst-pair'] != '-')]
 print('Data size after preprocessing:', len(df))
 
 # replace the best-pair and worst-pair labels with the actual item pairs
